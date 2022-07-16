@@ -1,14 +1,4 @@
-import { Options } from 'currency.js';
 import { ImporterFieldProps } from 'react-csv-importer';
-
-const currencyOptions: Options = {
-  decimal: ',',
-  precision: 2,
-
-  // these are probably specific to mt940 creation
-  // pattern: '#',
-  // negativePattern: '-#',
-};
 
 type CsvRow = {
   date: string;
@@ -51,4 +41,4 @@ type Transaction = {
 };
 
 export type { CsvRow, ProfileName, Transaction };
-export { currencyOptions, profiles };
+export { profiles };

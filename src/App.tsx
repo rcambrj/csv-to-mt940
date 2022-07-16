@@ -11,7 +11,7 @@ import getTransactionsFromCsv from './lib/getTransactionsFromCsv';
 function App() {
   const [profileName, setProfileName] = React.useState<ProfileName>();
   const [rows, setRows] = React.useState<CsvRow[]>([]);
-  const [mt940, setMt940] = React.useState<unknown>();
+  const [mt940, setMt940] = React.useState<string>();
 
   const profile = profileName && profiles[profileName];
 
@@ -44,7 +44,9 @@ function App() {
           onComplete={() => {
             setMt940(
               getMt940FromTransactions(getTransactionsFromCsv(rows), {
-                thisIban: 'TODO',
+                ownIban: 'TODO',
+                ownBankName: 'Revolut',
+                ownBic: 'REVOLT21',
               }),
             );
           }}
@@ -54,7 +56,7 @@ function App() {
           ))}
         </Importer>
       ) : (
-        <div>TODO</div>
+        <pre>{mt940}</pre>
       )}
     </div>
   );
