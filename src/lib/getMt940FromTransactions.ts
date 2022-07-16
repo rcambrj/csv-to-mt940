@@ -28,7 +28,7 @@ const getFormatted = ({
       separator: '',
       precision: 2,
       pattern: '#',
-      negativePattern: '-#',
+      negativePattern: '#',
     }),
     formattedDate: dayjs(date).format('YYMMDD'),
   };

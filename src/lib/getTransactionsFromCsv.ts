@@ -12,7 +12,6 @@ const getTransactionsFromCsv = (rows: CsvRow[]): Transaction[] => {
     .reduce<Transaction[]>((transactions, row) => {
       const amount = currency(row.amount);
       const balanceAfter = currency(row.balance);
-      console.log(row.balance, balanceAfter);
       const fee = currency(row.fee || 0);
       const date = new Date(row.date);
 
