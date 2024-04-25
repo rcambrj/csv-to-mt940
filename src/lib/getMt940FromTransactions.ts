@@ -79,7 +79,7 @@ const getMt940FromCsv = (
       date: lastTransaction.date,
       value: lastTransaction.balanceAfter,
     });
-    mt940.push(`:61:${formattedSign}${formattedDate}EUR${absoluteValue}`);
+    mt940.push(`:62F:${formattedSign}${formattedDate}EUR${absoluteValue}`);
   })();
 
   return mt940.join('\n');
