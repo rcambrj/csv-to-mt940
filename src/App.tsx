@@ -43,7 +43,7 @@ function App() {
           onComplete={() => {
             download(
               getMt940FromTransactions(getTransactionsFromCsv(rows), {
-                ownIban: 'TODO',
+                ownIban: '012345678',
                 ownBankName: 'Revolut',
                 ownBic: 'REVOLT21',
               }),
