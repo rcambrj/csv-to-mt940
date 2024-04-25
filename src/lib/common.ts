@@ -19,7 +19,7 @@ type Profile = {
 const profiles: Record<string, Profile> = {
   'Revolut Business': {
     fields: {
-      date: { label: 'Date completed (Europe/Amsterdam)' },
+      date: { label: 'Date completed (UTC)' },
       name: { label: 'Description' },
       reference: { label: 'Reference' },
       amount: { label: 'Amount' },
